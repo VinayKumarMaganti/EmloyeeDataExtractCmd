@@ -9,10 +9,11 @@ if (args.Length < 2)
 
 if (!string.IsNullOrEmpty(args[0]) && File.Exists(args[0]))
 {
-    try    {
+    try
+    {
         var dataExtractObj = new DataExtractBusiness();
-        var extractResponse  = dataExtractObj.ExtractFile(args[0]);
-        if(extractResponse.Errors.Count > 0)
+        var extractResponse = dataExtractObj.ExtractFile(args[0]);
+        if (extractResponse.Errors.Count > 0)
         {
             var error = JsonConvert.SerializeObject(extractResponse.Errors);
             Console.WriteLine(error);
@@ -28,7 +29,7 @@ if (!string.IsNullOrEmpty(args[0]) && File.Exists(args[0]))
             File.WriteAllText(args[1], employeeList);
         }
     }
-    catch(Exception ex)
+    catch (Exception ex)
     {
         Console.Write(ex.Message);
     }

@@ -1,17 +1,17 @@
 ﻿using System;
 namespace DataExtract
 {
-	public class EmployeeNameExtractor
-	{
-		public EmployeeNameExtractor(string field)
-		{
+    public class EmployeeNameExtractor
+    {
+        public EmployeeNameExtractor(string field)
+        {
             Field = field;
-		}
+        }
 
         private string Field { get; set; }
-	
-		public bool InvokeParse(Employee employee)
-		{
+
+        public bool InvokeParse(Employee employee)
+        {
             var nameFields = Field.Split(Constants.NameLevelDelimiter);
             if (nameFields.Length == 3)
             {
@@ -21,6 +21,8 @@ namespace DataExtract
                 }
                 else
                 {
+
+
                     return false;
                 }
 

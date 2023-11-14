@@ -33,8 +33,8 @@ namespace DataExtract
             }
             else
             {
-                if(string.IsNullOrEmpty(Field))
-                return true;
+                if (string.IsNullOrEmpty(Field))
+                    return true;
             }
             return false;
         }
